@@ -3,6 +3,15 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
+@font-face {
+    font-family: 'Norse-Bold';
+    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('./fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -33,11 +42,20 @@
     isolation: isolate;
   }
 
+  :root {
+    --main-color: rgb(238, 226, 233);
+    --main-color-h: 325;
+    --main-color-s: 26%;
+    --main-color-l: 91%;
+    --logo-font: "Norse-Bold", Arial, Helvetica, sans-serif, system-ui;
+  }
+
   .page {
     display: flex;
   }
 
   .design {
+    position: relative;
     background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
     background-position: center;
     background-size: auto 100%;
@@ -46,8 +64,53 @@
     height: 100vh;
   }
 
+  .design-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 184px;
+    min-width: 100%;
+    height: 148px;
+    background-color: rgb(0 0 0 / 40%);
+    padding: 12px;
+  }
+
+  .design-logo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .design-logo h1 {
+    font-family: var(--logo-font);
+    font-size: 7rem;
+    color: #ffffff;
+  }
+
+  .design p {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    color: var(--main-color);
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .design a:link {
+    color: var(--main-color);
+  }
+
+  .design a:visited {
+    color: var(--main-color);
+  }
+
+  .design a:hover {
+    color: hsl(var(--main-color-h), var(--main-color-s), 70%);
+  }
+
   .main {
-    background-color: #eee2e9;
+    background-color: var(--main-color);
     min-width: 71vw;
     height: 100vh;
   }
