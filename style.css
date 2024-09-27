@@ -143,19 +143,29 @@
     margin-bottom: 24px;
   }
 
-  form {
+  .form-container {
     height: 222px;
     box-shadow: inset 0px -3px 3px #7977772f;
+    margin-bottom: 36px;
   }
 
   .form-row {
-    width: 58%;
+    width: auto;
     display: flex;
     font-size: 0.9rem;
-    justify-content: space-around;
     letter-spacing: 1.5px;
     margin-bottom: 16px;
   }
+
+  .form-row p:first-child {
+    margin-left: 64px;
+  }
+
+  .form-row p:nth-child(2) {
+    margin-left: 92px;
+  }
+
+  
 
   /* Moves input field to new line */
   .form-row label {
@@ -200,6 +210,41 @@
   input[type="password"]:invalid:focus,
   input[type="password"]:valid:focus {
     box-shadow: none;
+  }
+
+  button {
+    margin-left: 64px;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #596D48;
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 48px;
+  }
+
+  .login {
+    margin-left: 64px;
+  }
+
+  .login a {
+    text-decoration: none;
+  }
+
+  .login a:link {
+    color: #596D48;
+  }
+  .login a:visited {
+    color: #8aa770;
+  }
+  .login a:hover {
+    color: #717e65;
+  }
+
+  .login a:active {
+    color: #3f4e31;
   }
 
   
